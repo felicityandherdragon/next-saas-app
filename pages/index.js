@@ -1,8 +1,10 @@
 import { supabase } from '../utils/supabase';
 import Link from "next/link";
+import { useUser } from '../context/user';
 
 const Home = ({ lessons }) => {
-  console.log(supabase.auth.user());
+  const {user} = useUser();
+  console.log(user);
   return (
     <div>
       <h2>Hiiiiiiii</h2>
